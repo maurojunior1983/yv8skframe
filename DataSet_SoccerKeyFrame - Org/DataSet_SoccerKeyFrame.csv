@@ -1,0 +1,51 @@
+video_path,start_time,end_time,description,Duração,Formato,Codec,Resolução,size_MB
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG02T_00-11-26.mp4,00:11:26,00:19:18,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,304.5
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG03T_01-26-01.mp4,01:26:01,01:33:23,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,304.5
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG04T_00-10-16.mp4,00:10:16,00:18:08,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,299.9
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG05T_00-18-04.mp4,00:18:04,00:25:26,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,304.3
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG06T_01-49-28.mp4,01:49:28,01:57:20,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,307.3
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG07T_01-10-00.mp4,01:10:00,01:17:22,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,306.7
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG08T_00-40-00.mp4,00:40:00,00:47:22,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,304.0
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG09T_00-48-07.mp4,00:48:07,00:55:29,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,306.9
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG10T_00-53-13.mp4,00:53:13,01:01:05,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,302.7
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG11T_01-12-11.mp4,01:12:11,01:20:03,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,304.4
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG12T_01-03-15.mp4,01:03:15,01:11:07,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,302.8
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG13T_01-00-16.mp4,01:00:16,01:08:08,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,302.7
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG14T_01-42-15.mp4,01:42:15,01:50:07,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,302.7
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG15T_01-35-00.mp4,01:35:00,01:42:22,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,302.1
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG16T_01-39-15.mp4,01:39:15,01:47:07,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,302.7
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG17T_01-20-11.mp4,01:20:11,01:28:03,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,305.6
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG18T_01-18-07.mp4,01:18:07,01:25:29,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,307.0
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG19T_00-13-26.mp4,00:13:26,00:21:18,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,302.0
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG20T_00-15-00.mp4,00:15:00,00:22:22,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,310.5
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_C_FOG/CFOG21T_00-20-13.mp4,00:20:13,00:28:05,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,302.8
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_S_FOG/SEM_FOG_02.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,320.2
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_S_FOG/SEM_FOG_03.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,306.2
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_S_FOG/SEM_FOG_04.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,308.4
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_S_FOG/SEM_FOG_05.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,305.1
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_S_FOG/SEM_FOG_06.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,298.8
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_S_FOG/SEM_FOG_07.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,300.7
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_S_FOG/SEM_FOG_08.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,305.5
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_S_FOG/SEM_FOG_09.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,309.7
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_S_FOG/SEM_FOG_10.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,305.2
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_S_FOG/SEM_FOG_11.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,305.1
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_S_FOG/SEM_FOG_12.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,300.6
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_S_FOG/SEM_FOG_13.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,300.4
+C:/DataSet_SoccerKeyFrame/TRAIN/LE_S_FOG/SEM_FOG_14.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,302.9
+C:/DataSet_SoccerKeyFrame/VALID/CFOG22T_00-30-15.mp4,00:30:15,00:38:07,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,303.9
+C:/DataSet_SoccerKeyFrame/VALID/CFOG23T_00-45-16.mp4,00:45:16,00:53:08,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,304.6
+C:/DataSet_SoccerKeyFrame/VALID/CFOG24T_00-55-09.mp4,00:55:09,01:03:01,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,306.4
+C:/DataSet_SoccerKeyFrame/VALID/CFOG25T_01-05-14.mp4,01:05:14,01:13:06,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,307.0
+C:/DataSet_SoccerKeyFrame/VALID/CFOG26T_01-15-07.mp4,01:15:07,01:22:29,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,302.8
+C:/DataSet_SoccerKeyFrame/VALID/CFOG27T_01-28-13.mp4,01:28:13,01:36:05,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,307.9
+C:/DataSet_SoccerKeyFrame/VALID/SEM_FOG_15.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,304.2
+C:/DataSet_SoccerKeyFrame/VALID/SEM_FOG_16.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,305.3
+C:/DataSet_SoccerKeyFrame/VALID/SEM_FOG_17.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,297.7
+C:/DataSet_SoccerKeyFrame/VALID/SEM_FOG_18.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,307.7
+C:/DataSet_SoccerKeyFrame/TEST/CFOG01T_00-28-18.mp4,00:28:18,00:36:10,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,302.6
+C:/DataSet_SoccerKeyFrame/TEST/CFOG28T_01-30-16.mp4,01:30:16,01:38:08,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,306.9
+C:/DataSet_SoccerKeyFrame/TEST/CFOG29T_01-30-11.mp4,01:30:11,01:38:03,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,304.1
+C:/DataSet_SoccerKeyFrame/TEST/CFOG30T_01-40-09.mp4,01:40:09,01:48:01,Com_Foguete,2 min,.MP4,H.264,1920 x 1080,305.0
+C:/DataSet_SoccerKeyFrame/TEST/SEM_FOG_01.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,311.2
+C:/DataSet_SoccerKeyFrame/TEST/SEM_FOG_19.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,297.1
+C:/DataSet_SoccerKeyFrame/TEST/SEM_FOG_20.mp4,,,Sem propaganda,2 min,.MP4,H.264,1920 x 1080,306.9
