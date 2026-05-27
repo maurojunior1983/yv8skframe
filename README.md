@@ -1,7 +1,7 @@
 # YV8SKFRAME
 
 <p align="center">
-  <b>Detection of Picture-in-Picture advertising keyframes in soccer broadcast videos</b><br>
+  <b>Detection of Picture-in-Picture advertising keyframes in soccer match videos</b><br>
   A reproducible training, validation and inference pipeline using <b>YOLOv8</b>, <b>YOLO26</b> and <b>Vision Transformer (ViT)</b>.
 </p>
 
@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <b>Figure 1.</b> End-to-end pipeline for detecting the start and end keyframes of Picture-in-Picture advertisements in soccer broadcast videos.
+  <b>Figure 1.</b> End-to-end pipeline for detecting the start and end keyframes of Picture-in-Picture advertisements in soccer match videos.
 </p>
 
 ---
@@ -45,7 +45,7 @@ The final goal is not only to detect whether a frame contains PiP, but also to e
 This repository accompanies a research project on automatic PiP keyframe detection in soccer videos. Its main contributions are:
 
 1. **A dedicated PiP sports dataset**  
-   The project uses 50 two-minute soccer broadcast videos, including videos with and without PiP advertisements, with frame-level annotations.
+   The project uses 50 two-minute soccer match videos, including videos with and without PiP advertisements, with frame-level annotations.
 
 2. **A comparison between visual paradigms**  
    The experiments compare **YOLOv8**, **YOLO26** and **ViT**, covering both object-detection and frame-classification strategies.
