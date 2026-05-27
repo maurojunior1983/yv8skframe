@@ -1,7 +1,7 @@
 # YV8SKFRAME
 
 <p align="center">
-  <img src="assets/pipeline.svg" alt="YV8SKFRAME pipeline" width="100%">
+  <img src="yv8skframe_github_package/assets/pipeline.svg" alt="YV8SKFRAME pipeline" width="100%">
 </p>
 
 <p align="center">
@@ -66,33 +66,36 @@ The validation and test video subsets are stored externally on Google Drive beca
 ```text
 YV8SKFRAME/
 │
-├── Fr_DataSet_S_K_Frame/
-│   ├── train/                 # Training frames and YOLO labels
-│   ├── valid/                 # Validation frames and YOLO labels
-│   ├── test/                  # Test frames and YOLO labels
-│   ├── data.yaml              # YOLO dataset configuration
-│   ├── training_results/      # Trained model outputs
-│   ├── YOLOv8_Detect_results/ # YOLOv8 inference spreadsheets
-│   ├── YOLO26_Detect_results/ # YOLO26 inference spreadsheets
-│   └── ViT_Detect_results/    # ViT inference spreadsheets
-│
-├── Vi_DataSet_S_K_Frame/
-│   ├── VALID/                 # Validation videos downloaded from external Google Drive folder
-│   └── TEST/                  # Test videos downloaded from external Google Drive folder
-│
-├── DataSet_SoccerKeyFrame - Org/
-│   └── DataSet_SoccerKeyFrame.xlsx  # Ground-truth start/end timecodes
-│
 ├── Codes/
 │   ├── train/                 # Training scripts
 │   ├── valid/                 # Validation and parameter tuning scripts
 │   └── detect/                # Final inference scripts
 │
-├── YV8SKFRAME_walkthrough.ipynb
+├── DataSet_SoccerKeyFrame - Org/
+│   └── DataSet_SoccerKeyFrame.xlsx  # Ground-truth start/end timecodes
+│
+├── Fr_DataSet_S_K_Frame/
+│   ├── train/                 # Training frames and YOLO labels
+│   ├── valid/                 # Validation frames and YOLO labels
+│   ├── test/                  # Test frames and YOLO labels
+│   ├── data.yaml              # YOLO dataset configuration
+│   ├── training_results/      # Trained model outputs generated after training
+│   ├── YOLOv8_Detect_results/ # YOLOv8 inference spreadsheets generated after detection
+│   ├── YOLO26_Detect_results/ # YOLO26 inference spreadsheets generated after detection
+│   └── ViT_Detect_results/    # ViT inference spreadsheets generated after detection
+│
+├── yv8skframe_github_package/
+│   ├── assets/
+│   │   └── pipeline.svg       # Figure used in this README
+│   └── YV8SKFRAME_walkthrough.ipynb  # Guided notebook explaining the project workflow
+│
+├── .gitattributes
+├── .gitignore
+├── LICENSE
 └── README.md
 ```
 
-> **Note about generated-result folders:** the folders `training_results/`, `YOLOv8_Detect_results/`, `YOLO26_Detect_results/` and `ViT_Detect_results/` are intentionally kept in the repository as empty directories. Their contents are not included because trained weights, logs, plots and inference spreadsheets can become large. As new experiments are executed, the corresponding outputs will be automatically saved into these folders by the training and inference scripts.
+> **Note about generated-result folders:** inside `Fr_DataSet_S_K_Frame/`, the folders `training_results/`, `YOLOv8_Detect_results/`, `YOLO26_Detect_results/` and `ViT_Detect_results/` are intentionally kept in the repository as empty directories. Their contents are not included because trained weights, logs, plots and inference spreadsheets can become large. As new experiments are executed, the corresponding outputs will be automatically saved into these folders by the training and inference scripts.
 
 ---
 
@@ -232,10 +235,16 @@ The evaluated models achieved no false positives in the final test subset. The m
 
 ## Jupyter Notebook walkthrough
 
-A complete explanatory notebook is available in this repository:
+A complete explanatory notebook is available in this repository inside the GitHub support package folder:
 
 ```text
-YV8SKFRAME_walkthrough.ipynb
+yv8skframe_github_package/YV8SKFRAME_walkthrough.ipynb
+```
+
+The pipeline figure used at the top of this README is also stored in that same support package:
+
+```text
+yv8skframe_github_package/assets/pipeline.svg
 ```
 
 It explains:
