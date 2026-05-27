@@ -1,10 +1,6 @@
 # YV8SKFRAME
 
 <p align="center">
-  <img src="yv8skframe_github_package/assets/pipeline.svg" alt="YV8SKFRAME pipeline" width="100%">
-</p>
-
-<p align="center">
   <b>Detection of Picture-in-Picture advertising keyframes in soccer broadcast videos</b><br>
   Training, validation and inference pipeline using <b>YOLOv8</b>, <b>YOLO26</b> and <b>Vision Transformer (ViT)</b>.
 </p>
@@ -12,8 +8,9 @@
 <p align="center">
   <img alt="Python" src="https://img.shields.io/badge/Python-3.10+-blue">
   <img alt="Ultralytics" src="https://img.shields.io/badge/Ultralytics-YOLO-orange">
-  <img alt="OpenCV" src="https://img.shields.io/badge/OpenCV-video_processing-green">
-  <img alt="Research" src="https://img.shields.io/badge/Application-sports_video_analysis-purple">
+  <img alt="ViT" src="https://img.shields.io/badge/Model-Vision%20Transformer-purple">
+  <img alt="OpenCV" src="https://img.shields.io/badge/OpenCV-video%20processing-green">
+  <img alt="Application" src="https://img.shields.io/badge/Application-sports%20video%20editing-lightgrey">
 </p>
 
 ---
@@ -24,11 +21,54 @@
 
 The project compares three visual learning approaches:
 
-- **YOLOv8** - object detection baseline for localizing PiP advertising regions.
-- **YOLO26** - recent YOLO-family detector evaluated under the same temporal post-processing pipeline.
-- **Vision Transformer (ViT)** - frame-level image classifier used as a comparative model.
+- **YOLOv8** — object-detection baseline for locating PiP advertising regions;
+- **YOLO26** — recent YOLO-family detector evaluated under the same temporal post-processing pipeline;
+- **Vision Transformer (ViT)** — frame-level image classifier used as a comparative model.
 
-The pipeline was designed for an audiovisual editing scenario: given a soccer broadcast video, the system identifies the time interval in which a PiP advertisement appears, supporting semi-automatic or automatic video-editing workflows.
+The pipeline was designed for an audiovisual editing scenario: given a soccer broadcast video, the system identifies the time interval in which a PiP advertisement appears and returns **drop-frame timecodes** for the detected start and end keyframes. This supports semi-automatic or automatic workflows for video editing, content indexing, ad replacement and post-production analysis.
+
+---
+
+## Main contributions
+
+This repository accompanies a research project on the **automatic detection of Picture-in-Picture advertisement keyframes in soccer videos**. Its main contributions are:
+
+1. **A novel PiP sports dataset**  
+   A dataset composed of 50 two-minute soccer broadcast videos, including videos with and without PiP ads, with frame-level annotations.
+
+2. **A comparison between different visual paradigms**  
+   The project compares **YOLOv8**, **YOLO26** and **ViT**, covering object-detection approaches and frame-classification approaches.
+
+3. **A practical video-processing pipeline**  
+   The inference scripts operate directly on videos and return **start and end timecodes in drop-frame format**, suitable for non-linear editing workflows.
+
+4. **A gradual temporal evaluation metric**  
+   The work adopts a **Fibonacci-based gradual accuracy metric**, designed to penalize temporal deviations progressively and more fairly than a purely exponential scale.
+
+---
+
+## Modeling pipeline
+
+Although all evaluated models are applied frame by frame, they follow two different visual paradigms.
+
+- **YOLOv8** and **YOLO26** are trained as object detectors using annotated PiP regions with the typical L-shaped advertising layout. Their detections are then converted into frame-level PiP/non-PiP decisions.
+- **ViT** is trained as a frame classifier, learning whether each frame contains PiP or not without explicit object localization.
+
+### YOLOv8 and YOLO26 pipeline
+
+<p align="center">
+  <img src="yv8skframe_github_package/assets/pipeline_yolo_yolo26.jpg" alt="YOLOv8 and YOLO26 training and detection pipeline" width="900">
+</p>
+
+<p align="center"><b>Figure 1.</b> Training the YOLOv8 and YOLO26 models, from frames extracted from the videos and the subsequent object detection and frame-level classification on the videos.</p>
+
+### ViT pipeline
+
+<p align="center">
+  <img src="yv8skframe_github_package/assets/pipeline_vit.jpg" alt="ViT training and classification pipeline" width="900">
+</p>
+
+<p align="center"><b>Figure 2.</b> Training the ViT model, from frames extracted from the videos and the subsequent frame-level classification on the videos.</p>
 
 ---
 
@@ -68,7 +108,7 @@ YV8SKFRAME/
 │
 ├── Codes/
 │   ├── train/                 # Training scripts
-│   ├── valid/                 # Validation and parameter tuning scripts
+│   ├── valid/                 # Validation and parameter-tuning scripts
 │   └── detect/                # Final inference scripts
 │
 ├── DataSet_SoccerKeyFrame - Org/
@@ -86,8 +126,10 @@ YV8SKFRAME/
 │
 ├── yv8skframe_github_package/
 │   ├── assets/
-│   │   └── pipeline.svg       # Figure used in this README
-│   └── YV8SKFRAME_walkthrough.ipynb  # Guided notebook explaining the project workflow
+│   │   ├── pipeline_yolo_yolo26.jpg # YOLOv8/YOLO26 pipeline figure
+│   │   ├── pipeline_vit.jpg         # ViT pipeline figure
+│   │   └── pipeline.svg             # General project pipeline figure
+│   └── YV8SKFRAME_walkthrough.ipynb # Guided notebook explaining the workflow
 │
 ├── .gitattributes
 ├── .gitignore
@@ -179,7 +221,7 @@ C:\YV8SKFRAME\Vi_DataSet_S_K_Frame\VALID
 C:\YV8SKFRAME\Codes\valid
 ```
 
-The models produce frame-level detections. A temporal post-processing stage is then applied to convert these detections into PiP intervals. The parameters below were empirically adjusted on the validation subset.
+The models produce frame-level detections or classifications. A temporal post-processing stage is then applied to convert frame-level outputs into PiP intervals. The parameters below were empirically adjusted on the validation subset.
 
 | Parameter | YOLOv8 | YOLO26 | ViT |
 |---|---:|---:|---:|
@@ -221,6 +263,21 @@ The detection scripts generate spreadsheets with:
 
 ---
 
+## Main findings
+
+The experiments showed that **none of the evaluated models produced false positives**. This is especially relevant in automated editing pipelines, where a false positive may lead to an incorrect cut in journalistic content.
+
+Among the evaluated models:
+
+- **ViT** achieved the best overall performance on the test set;
+- **ViT** was more accurate at detecting the **start** of the PiP insertion, likely because it classifies the whole frame and does not depend on full object completeness during the gradual appearance of the graphic;
+- **YOLO26** was slightly more accurate at detecting the **end** of the PiP insertion;
+- **YOLO26** outperformed **YOLOv8** in temporal localization, especially at the beginning of the ad insertion.
+
+These results suggest that the two paradigms are complementary: frame classification performs better at the beginning of the transition, while object detection may be more precise at the end.
+
+---
+
 ## Reported performance
 
 The evaluated models achieved no false positives in the final test subset. The main difference was temporal recall, especially around the gradual appearance of the PiP graphic.
@@ -239,12 +296,6 @@ A complete explanatory notebook is available in this repository inside the GitHu
 
 ```text
 yv8skframe_github_package/YV8SKFRAME_walkthrough.ipynb
-```
-
-The pipeline figure used at the top of this README is also stored in that same support package:
-
-```text
-yv8skframe_github_package/assets/pipeline.svg
 ```
 
 It explains:
@@ -283,6 +334,22 @@ results = model("C:/YV8SKFRAME/Fr_DataSet_S_K_Frame/test/images/example.jpg", sa
 
 ---
 
+## Limitations and future work
+
+Some limitations should be noted:
+
+- the dataset was built from videos from a single broadcaster;
+- therefore, broader claims about generalization should be made carefully.
+
+Future work includes:
+
+- expanding the dataset to videos from other broadcasters;
+- performing **cross-source validation**;
+- investigating the impact of higher frame-sampling rates on YOLO-based models;
+- exploring **semi-supervised learning** strategies to reduce frame-level annotation cost.
+
+---
+
 ## Citation
 
 If this repository helps your work, please cite the associated paper:
@@ -301,4 +368,4 @@ If this repository helps your work, please cite the associated paper:
 
 ## Project status
 
-This repository is part of an academic research project on automatic keyframe detection for sports broadcast editing. The current implementation focuses on soccer videos with PiP advertising overlays. Future extensions may include higher frame-rate sampling, additional detectors, temporal models, and broader sports-broadcast datasets.
+This repository is part of an academic research project on automatic keyframe detection for sports broadcast editing. The current implementation focuses on soccer videos with PiP advertising overlays.
