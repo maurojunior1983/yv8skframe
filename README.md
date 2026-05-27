@@ -92,6 +92,8 @@ YV8SKFRAME/
 └── README.md
 ```
 
+> **Note about generated-result folders:** the folders `training_results/`, `YOLOv8_Detect_results/`, `YOLO26_Detect_results/` and `ViT_Detect_results/` are intentionally kept in the repository as empty directories. Their contents are not included because trained weights, logs, plots and inference spreadsheets can become large. As new experiments are executed, the corresponding outputs will be automatically saved into these folders by the training and inference scripts.
+
 ---
 
 ## Research workflow
