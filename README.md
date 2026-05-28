@@ -358,7 +358,7 @@ If this repository helps your work, please cite the associated paper:
 ```bibtex
 @inproceedings{mendes2026pipkeyframes,
   title     = {Detecção de Keyframes de Publicidade Picture-in-Picture em Vídeos de Partidas de Futebol},
-  author    = {Mendes Junior, Mauro Nunes and Andrade, Fábio Augusto de Alcantara and Passos, Wesley Lobato and Gois, Jonathan Nogueira and Lima, Amaro Azevedo de and Araujo, Gabriel Matos},
+  author    = {Mendes Jr, Mauro Nunes and Andrade, Fábio Augusto de Alcantara and Passos, Wesley Lobato and Gois, Jonathan Nogueira and Lima, Amaro Azevedo de and Araujo, Gabriel Matos},
   booktitle = {XLIV Simpósio Brasileiro de Telecomunicações e Processamento de Sinais},
   year      = {2026},
   address   = {Salvador, BA, Brazil}
